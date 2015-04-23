@@ -26,7 +26,8 @@ resource "aws_instance" "bastion" {
   }
 
   tags {
-    Name = "bastion-server"
+    Name        = "bastion-server"
+    Environment = "${var.environment_name}"
   }
 }
 

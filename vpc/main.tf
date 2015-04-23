@@ -6,6 +6,9 @@ provider "aws" {
 
 resource "aws_vpc" "default" {
   cidr_block = "${var.vpc_cidr}"
+  tags = {
+    Name = "${var.environment_name}"
+  }
 }
 
 resource "aws_internet_gateway" "default" {

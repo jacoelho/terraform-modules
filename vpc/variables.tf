@@ -5,6 +5,10 @@ variable "aws_key_name"   { }
 variable "aws_region"     { }
 variable "aws_ubuntu_ami" { }
 
+variable "environment_name" {
+  default = "testing"
+}
+
 variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
